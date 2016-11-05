@@ -1,0 +1,492 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+Created on : 2016-03-03, 11:00:24
+Author     : jank
+*/
+
+$f-color: #0d3976;
+//$content-width: 960px;
+@mixin placeholder-color{
+    ::-webkit-input-placeholder {
+        color: black;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: black;
+    }
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: black;
+    }
+    :-ms-input-placeholder {
+        color: black;
+    }
+}
+@mixin input-text{
+    border: 1px solid $f-color;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 10px;
+    padding: 5px;
+    @include placeholder-color;
+}
+@mixin submit{
+    input[type="submit"]{
+        background-color: $f-color;
+        border: 0 none;
+        color: white;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 3px 15px;
+        text-transform: uppercase;
+    }
+}
+@mixin gradient{
+    border-top: 3px solid blue;
+    background: blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left,rgba(51, 51, 204,0.5),rgba(51, 153, 255,0.5)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(51, 51, 204,0.5),rgba(51, 153, 255,0.5)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(51, 51, 204,0.5),rgba(51, 153, 255,0.5)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(51, 51, 204,0.5), rgba(51, 153, 255,0.5)); /*Standard*/
+}
+*{
+    padding:0px;
+    margin:0px;
+}
+a{
+    text-decoration: none;
+}
+.selected{
+    background-color:#a7daf2;
+}
+.nightMode{
+    filter:invert(100%);
+    -webkit-filter:invert(100%);
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    padding:0px;
+    font-family: "Open Sans",sans-serif;
+    background-image: url("../images/tlo-kpowm-podstrona-2pasek.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    .page{
+        margin: auto;
+        width: 955px;
+        min-height: 100%;
+        .header{
+            padding: 0 10px;
+            .container{
+                display: block;
+                margin: auto;
+                .top{
+                    height:35px;
+                    .link{
+                        float:left;
+                        padding-top: 6px;
+                        a{
+                            color: white;
+                            font-size:12px;
+                        }
+                    }
+                    .nav1{
+                        float:right;
+                        padding-top: 6px;
+                        .text-size{
+                            display: inline;
+                            a{
+                                color: white;
+                                padding: 0 0px;
+                            }
+                            #a1{
+                                font-size:9px;
+                            }
+                            #a2{
+                                font-size:10px;
+                            }
+                            #a3{
+                                font-size:12px;
+                            }
+                        }
+                        .lang1{
+                            display: inline;
+                            a, span{
+                                color: white;
+                                font-size:12px;
+                                padding: 0 0px;
+                            }
+                        }
+                        #oko{
+                            display: inline;
+                            cursor: pointer;
+                            img{
+                                padding: 0 14px;
+                            }
+                        }
+
+                    }
+                }
+                .wrapper{
+                    clear: both;
+                    padding-top: 75px;
+                    height: 95px;
+                }
+                nav{
+                    height:48px;
+
+                    ul{
+                        list-style-type: none;
+                        padding: 13px 0 ;
+                        margin: 0px;
+                        li{
+                            display:inline;
+                            position: relative;
+                            padding: 13px 20px 11px;
+                            a{
+                                display: inline-block;
+                                text-decoration: none;
+                                text-align: center;
+                                font-size: 14px;
+                                color: $f-color;
+                                width: 120px;
+                            }
+                            a:visited{
+                                color:#000033;
+                            }
+                            ul{
+                                display: none;
+                                list-style-type: none;
+                                position: absolute;
+                                width: inherit;
+                                height: inherit;
+                                left: 0px;
+                                padding: 10px 0 0;
+                                width: 164px;
+                                li{
+                                    background-color: rgba(255, 255, 255, 0.8);
+                                    display: block;
+                                    text-align: center;
+                                    float: none;
+                                    position: static;
+                                    a{
+                                        text-decoration: none;
+                                        font-size: 12px;
+                                    }
+                                    a:hover{
+
+                                    }
+                                }
+                                li:hover{
+                                    background-color:rgba(179, 204, 255, 0.8);
+                                }
+                            }
+                        }//nav > ul > li
+                        li:hover{
+                            background-color:white;
+                            ul{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                #responsiveMenu{
+                    display: none;
+                    button{
+                        background-color: rgba(255, 255, 255, 0.3);
+                        border: medium none;
+                        border-radius: 12px;
+                        opacity: 0.5;
+                        padding: 10px;
+
+                    }
+                }
+            }
+        }
+        .content{
+            display: block;
+            margin: auto;
+            h1{
+                color: white;
+                font-size: 40px;
+                font-weight: 500;
+                margin: 12px;
+                text-transform: uppercase;
+            }
+            section{
+                h1{
+                    color: rgb(0, 149, 218);
+                }
+                ol{
+                    list-style-type: none;
+                    padding-left: 0;
+                    width: 600px;
+                    li{
+                        background-color: rgba(255, 255, 255, 0.1);
+                        border-radius: 10px;
+                        margin: 12px;
+                        padding: 2px 20px;
+
+                        a{
+                            color: white;
+                            font-size: 15px;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+            aside{
+                .newsletter{
+                    width: 328px;
+                    margin-bottom: 10px;
+                    form{
+                        background-color: rgba(255, 255, 255, 0.2);
+                        padding: 8px 35px 15px 20px;
+                        label{
+                            color: $f-color;
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
+                        input[type="email"]{
+                            @include input-text
+                        }
+                        @include placeholder-color;
+                        @include submit;
+                    }
+                }
+                .banery{
+                    width: 328px;
+                    img{
+                        margin-bottom: 5px;
+                    }
+                }
+                .pytanie{
+                    width: 328px;
+                    form{
+                        background-color: rgba(255, 255, 255, 0.2);
+                        padding: 8px 35px 15px 20px;
+                        label{
+                            color: $f-color;
+                            font-size: 13px;
+                            font-weight: 600;
+                        }
+                        textarea{
+                            @include input-text
+                        }
+                        @include submit;
+                    }
+                }
+            }
+        }
+        .dlaczego{
+            display: none;
+            div{
+                max-width: 460px;
+                h2{
+                    color: rgb(0, 149, 218);
+                }
+                p{
+                    text-align: justify;
+                }
+            }
+        }
+    }
+    .page:after{
+        content: "";
+        display: block;
+        height: 169px;
+    }
+    footer{
+        display: block;
+        background-color:white;
+        //margin-top: -169px;
+        .grad-nav{
+            @include gradient;
+            nav{
+                margin: auto;
+                width: 955px;
+                ul{
+                    list-style-type: none;
+                    padding-left: 0;
+                    margin: 5px 0;
+                    li{
+                        padding: 0 30px;
+                        display: inline;
+                        a, a:visited{
+                            color: white;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+        .loga-stopka{
+            background-color: white;
+            margin: auto;
+            width: 955px;
+            .loga{
+                margin: auto;
+
+                img{
+                    padding: 20px 70px;
+                    vertical-align: middle;
+                }
+
+            }
+            .stopka{
+                height: 20px;
+                margin: auto;
+                .text1{
+                    float:left;
+                    display:inline;
+                    font-size: 12px;
+                    span{
+                        color:grey;
+                    }
+                }
+                .text2{
+                    font-size: 12px;
+                    display:inline;
+                    float:right;
+                    span{
+                        color:grey;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    body .page {
+        max-width: 100%;
+    }
+    .wrapper img{
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .content{
+        text-align: center;
+        section{
+            ol{
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+        aside{
+            margin: auto;
+            .newsletter{
+                margin: auto;
+            }
+            .banery{
+                margin: auto;
+            }
+            .pytanie{
+                margin: auto;
+            }
+        }
+    }
+    body footer .loga-stopka, body footer .grad-nav nav{
+        width: 100%;
+    }
+    body footer .loga-stopka .loga ul li img {
+        padding: 20px 50px;
+    }
+    body footer .loga-stopka .stopka .text1, body footer .loga-stopka .stopka .text2{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 850px) {
+    body{
+        .page{
+            //padding: 0px 10px;
+            //max-width: 100%;
+            .header{
+                .container{
+                    nav{
+                        display: none;
+                    }
+                    #responsiveMenu{
+                        display: block;
+                        width: 100%;
+                        #menuList{
+                            display: none;
+                            ul{
+                                list-style-type: none;
+
+                                padding-left: 0px;
+                                li{
+                                    width:100%;
+                                    display: block;
+                                    text-align: center;
+                                    background-color: rgba(255, 255, 255, 0.8);
+
+                                }
+                                li:hover{
+                                    background-color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .grad-nav nav ul li{
+        display: block;
+        width:100%;
+        text-align: center;
+
+    }
+    body footer .loga-stopka .loga img{
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    body footer .loga-stopka .stopka .text1, body footer .loga-stopka .stopka .text2, body footer .loga-stopka .loga ul li {
+        display: block;
+        text-align: center;
+        //margin: auto;
+        float: none;
+
+    }
+    body footer .grad-nav nav ul li {
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width: 568px) {
+    aside{
+        margin: auto;
+        .newsletter{
+            width: 80%;
+            margin: auto;
+        }
+        .banery{
+            width: 80%;
+            margin: auto;
+            img{
+                width: 100%;
+            }
+        }
+        .pytanie{
+            width: 80%;
+            margin: auto;
+        }
+    }
+    body footer .grad-nav nav ul li {
+        display: block;
+        margin: auto;
+    }
+    body footer .grad-nav nav ul li {
+        padding: 0px;
+    }
+}

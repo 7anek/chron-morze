@@ -1,0 +1,393 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+Created on : 2016-03-03, 11:00:24
+Author     : jank
+*/
+* {
+  padding: 0px;
+  margin: 0px; }
+
+a {
+  text-decoration: none; }
+
+.selected {
+  background-color: #a7daf2; }
+
+.nightMode {
+  filter: invert(100%);
+  -webkit-filter: invert(100%); }
+
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  height: 100%;
+  padding: 0px;
+  font-family: "Open Sans",sans-serif;
+  background-image: url("../images/tlo-kpowm-podstrona-2pasek.jpg");
+  background-repeat: no-repeat;
+  background-position: top; }
+  body .page {
+    margin: auto;
+    width: 955px;
+    min-height: 100%; }
+    body .page .header {
+      padding: 0 10px; }
+      body .page .header .container {
+        display: block;
+        margin: auto; }
+        body .page .header .container .top {
+          height: 35px; }
+          body .page .header .container .top .link {
+            float: left;
+            padding-top: 6px; }
+            body .page .header .container .top .link a {
+              color: white;
+              font-size: 12px; }
+          body .page .header .container .top .nav1 {
+            float: right;
+            padding-top: 6px; }
+            body .page .header .container .top .nav1 .text-size {
+              display: inline; }
+              body .page .header .container .top .nav1 .text-size a {
+                color: white;
+                padding: 0 0px; }
+              body .page .header .container .top .nav1 .text-size #a1 {
+                font-size: 9px; }
+              body .page .header .container .top .nav1 .text-size #a2 {
+                font-size: 10px; }
+              body .page .header .container .top .nav1 .text-size #a3 {
+                font-size: 12px; }
+            body .page .header .container .top .nav1 .lang1 {
+              display: inline; }
+              body .page .header .container .top .nav1 .lang1 a, body .page .header .container .top .nav1 .lang1 span {
+                color: white;
+                font-size: 12px;
+                padding: 0 0px; }
+            body .page .header .container .top .nav1 #oko {
+              display: inline;
+              cursor: pointer; }
+              body .page .header .container .top .nav1 #oko img {
+                padding: 0 14px; }
+        body .page .header .container .wrapper {
+          clear: both;
+          padding-top: 75px;
+          height: 95px; }
+        body .page .header .container nav {
+          height: 48px; }
+          body .page .header .container nav ul {
+            list-style-type: none;
+            padding: 13px 0;
+            margin: 0px; }
+            body .page .header .container nav ul li {
+              display: inline;
+              position: relative;
+              padding: 13px 20px 11px; }
+              body .page .header .container nav ul li a {
+                display: inline-block;
+                text-decoration: none;
+                text-align: center;
+                font-size: 14px;
+                color: #0d3976;
+                width: 120px; }
+              body .page .header .container nav ul li a:visited {
+                color: #000033; }
+              body .page .header .container nav ul li ul {
+                display: none;
+                list-style-type: none;
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                left: 0px;
+                padding: 10px 0 0;
+                width: 164px; }
+                body .page .header .container nav ul li ul li {
+                  background-color: rgba(255, 255, 255, 0.8);
+                  display: block;
+                  text-align: center;
+                  float: none;
+                  position: static; }
+                  body .page .header .container nav ul li ul li a {
+                    text-decoration: none;
+                    font-size: 12px; }
+                body .page .header .container nav ul li ul li:hover {
+                  background-color: rgba(179, 204, 255, 0.8); }
+            body .page .header .container nav ul li:hover {
+              background-color: white; }
+              body .page .header .container nav ul li:hover ul {
+                display: block; }
+        body .page .header .container #responsiveMenu {
+          display: none; }
+          body .page .header .container #responsiveMenu button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: medium none;
+            border-radius: 12px;
+            opacity: 0.5;
+            padding: 10px; }
+    body .page .content {
+      display: block;
+      margin: auto; }
+      body .page .content h1 {
+        color: white;
+        font-size: 40px;
+        font-weight: 500;
+        margin: 12px;
+        text-transform: uppercase; }
+      body .page .content section h1 {
+        color: #0095da; }
+      body .page .content section ol {
+        list-style-type: none;
+        padding-left: 0;
+        width: 600px; }
+        body .page .content section ol li {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          margin: 12px;
+          padding: 2px 20px; }
+          body .page .content section ol li a {
+            color: white;
+            font-size: 15px;
+            font-weight: 800; }
+      body .page .content aside .newsletter {
+        width: 328px;
+        margin-bottom: 10px; }
+        body .page .content aside .newsletter form {
+          background-color: rgba(255, 255, 255, 0.2);
+          padding: 8px 35px 15px 20px; }
+          body .page .content aside .newsletter form label {
+            color: #0d3976;
+            font-size: 13px;
+            font-weight: 600; }
+          body .page .content aside .newsletter form input[type="email"] {
+            border: 1px solid #0d3976;
+            margin: 5px 0;
+            width: 100%;
+            font-size: 10px;
+            padding: 5px; }
+            body .page .content aside .newsletter form input[type="email"] ::-webkit-input-placeholder {
+              color: black; }
+            body .page .content aside .newsletter form input[type="email"] :-moz-placeholder {
+              /* Firefox 18- */
+              color: black; }
+            body .page .content aside .newsletter form input[type="email"] ::-moz-placeholder {
+              /* Firefox 19+ */
+              color: black; }
+            body .page .content aside .newsletter form input[type="email"] :-ms-input-placeholder {
+              color: black; }
+          body .page .content aside .newsletter form ::-webkit-input-placeholder {
+            color: black; }
+          body .page .content aside .newsletter form :-moz-placeholder {
+            /* Firefox 18- */
+            color: black; }
+          body .page .content aside .newsletter form ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: black; }
+          body .page .content aside .newsletter form :-ms-input-placeholder {
+            color: black; }
+          body .page .content aside .newsletter form input[type="submit"] {
+            background-color: #0d3976;
+            border: 0 none;
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 3px 15px;
+            text-transform: uppercase; }
+      body .page .content aside .banery {
+        width: 328px; }
+        body .page .content aside .banery img {
+          margin-bottom: 5px; }
+      body .page .content aside .pytanie {
+        width: 328px; }
+        body .page .content aside .pytanie form {
+          background-color: rgba(255, 255, 255, 0.2);
+          padding: 8px 35px 15px 20px; }
+          body .page .content aside .pytanie form label {
+            color: #0d3976;
+            font-size: 13px;
+            font-weight: 600; }
+          body .page .content aside .pytanie form textarea {
+            border: 1px solid #0d3976;
+            margin: 5px 0;
+            width: 100%;
+            font-size: 10px;
+            padding: 5px; }
+            body .page .content aside .pytanie form textarea ::-webkit-input-placeholder {
+              color: black; }
+            body .page .content aside .pytanie form textarea :-moz-placeholder {
+              /* Firefox 18- */
+              color: black; }
+            body .page .content aside .pytanie form textarea ::-moz-placeholder {
+              /* Firefox 19+ */
+              color: black; }
+            body .page .content aside .pytanie form textarea :-ms-input-placeholder {
+              color: black; }
+          body .page .content aside .pytanie form input[type="submit"] {
+            background-color: #0d3976;
+            border: 0 none;
+            color: white;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 3px 15px;
+            text-transform: uppercase; }
+    body .page .dlaczego {
+      display: none; }
+      body .page .dlaczego div {
+        max-width: 460px; }
+        body .page .dlaczego div h2 {
+          color: #0095da; }
+        body .page .dlaczego div p {
+          text-align: justify; }
+  body .page:after {
+    content: "";
+    display: block;
+    height: 169px; }
+  body footer {
+    display: block;
+    background-color: white; }
+    body footer .grad-nav {
+      border-top: 3px solid blue;
+      background: blue;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(left, rgba(51, 51, 204, 0.5), rgba(51, 153, 255, 0.5));
+      /*Safari 5.1-6*/
+      background: -o-linear-gradient(right, rgba(51, 51, 204, 0.5), rgba(51, 153, 255, 0.5));
+      /*Opera 11.1-12*/
+      background: -moz-linear-gradient(right, rgba(51, 51, 204, 0.5), rgba(51, 153, 255, 0.5));
+      /*Fx 3.6-15*/
+      background: linear-gradient(to right, rgba(51, 51, 204, 0.5), rgba(51, 153, 255, 0.5));
+      /*Standard*/ }
+      body footer .grad-nav nav {
+        margin: auto;
+        width: 955px; }
+        body footer .grad-nav nav ul {
+          list-style-type: none;
+          padding-left: 0;
+          margin: 5px 0; }
+          body footer .grad-nav nav ul li {
+            padding: 0 30px;
+            display: inline; }
+            body footer .grad-nav nav ul li a, body footer .grad-nav nav ul li a:visited {
+              color: white;
+              text-transform: uppercase; }
+    body footer .loga-stopka {
+      background-color: white;
+      margin: auto;
+      width: 955px; }
+      body footer .loga-stopka .loga {
+        margin: auto; }
+        body footer .loga-stopka .loga img {
+          padding: 20px 70px;
+          vertical-align: middle; }
+      body footer .loga-stopka .stopka {
+        height: 20px;
+        margin: auto; }
+        body footer .loga-stopka .stopka .text1 {
+          float: left;
+          display: inline;
+          font-size: 12px; }
+          body footer .loga-stopka .stopka .text1 span {
+            color: grey; }
+        body footer .loga-stopka .stopka .text2 {
+          font-size: 12px;
+          display: inline;
+          float: right; }
+          body footer .loga-stopka .stopka .text2 span {
+            color: grey; }
+
+@media screen and (max-width: 1024px) {
+  body .page {
+    max-width: 100%; }
+
+  .wrapper img {
+    max-width: 100%;
+    display: block;
+    margin: auto; }
+
+  .content {
+    text-align: center; }
+    .content section ol {
+      max-width: 100%;
+      margin: auto; }
+    .content aside {
+      margin: auto; }
+      .content aside .newsletter {
+        margin: auto; }
+      .content aside .banery {
+        margin: auto; }
+      .content aside .pytanie {
+        margin: auto; }
+
+  body footer .loga-stopka, body footer .grad-nav nav {
+    width: 100%; }
+
+  body footer .loga-stopka .loga ul li img {
+    padding: 20px 50px; }
+
+  body footer .loga-stopka .stopka .text1, body footer .loga-stopka .stopka .text2 {
+    font-size: 10px; } }
+@media screen and (max-width: 850px) {
+  body .page .header .container nav {
+    display: none; }
+  body .page .header .container #responsiveMenu {
+    display: block;
+    width: 100%; }
+    body .page .header .container #responsiveMenu #menuList {
+      display: none; }
+      body .page .header .container #responsiveMenu #menuList ul {
+        list-style-type: none;
+        padding-left: 0px; }
+        body .page .header .container #responsiveMenu #menuList ul li {
+          width: 100%;
+          display: block;
+          text-align: center;
+          background-color: rgba(255, 255, 255, 0.8); }
+        body .page .header .container #responsiveMenu #menuList ul li:hover {
+          background-color: white; }
+
+  .grad-nav nav ul li {
+    display: block;
+    width: 100%;
+    text-align: center; }
+
+  body footer .loga-stopka .loga img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px; }
+
+  body footer .loga-stopka .stopka .text1, body footer .loga-stopka .stopka .text2, body footer .loga-stopka .loga ul li {
+    display: block;
+    text-align: center;
+    float: none; }
+
+  body footer .grad-nav nav ul li {
+    padding: 0 10px; } }
+@media screen and (max-width: 568px) {
+  aside {
+    margin: auto; }
+    aside .newsletter {
+      width: 80%;
+      margin: auto; }
+    aside .banery {
+      width: 80%;
+      margin: auto; }
+      aside .banery img {
+        width: 100%; }
+    aside .pytanie {
+      width: 80%;
+      margin: auto; }
+
+  body footer .grad-nav nav ul li {
+    display: block;
+    margin: auto; }
+
+  body footer .grad-nav nav ul li {
+    padding: 0px; } }
+
+/*# sourceMappingURL=style.css.map */
